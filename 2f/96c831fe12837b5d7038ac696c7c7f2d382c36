@@ -1,0 +1,29 @@
+README.md
+  s_ede64a7a3719f9::t_99ad39c2edd9b0 1-57
+bin/sweep.mjs
+  s_ede64a7a3719f9::t_404f34e4f3c664 1-52,54-118
+  s_ede64a7a3719f9::t_42481352244337 53
+registry.json
+  s_ede64a7a3719f9::t_407dad91f98408 1-2,4-9,12-20,23-31,34-42,45-53,56-64,67-75,78,332-336
+  s_ede64a7a3719f9::t_33d6ada92e5414 3,10-11,21-22,32-33,43-44,54-55,65-66,76-77,79-331
+.github/workflows/verify.yml
+  s_ede64a7a3719f9::t_a15b94fd3301ea 1-18
+bin/verify.mjs
+  s_ede64a7a3719f9::t_549414b068658d 1-142
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "2f96c831fe12837b5d7038ac696c7c7f2d382c36",
+  "prompts": {},
+  "sessions": {
+    "s_ede64a7a3719f9": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ff2989863ffeLRJ8x2W0ekTtof",
+        "model": "mimo-v2.5"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
