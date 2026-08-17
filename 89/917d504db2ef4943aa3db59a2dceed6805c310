@@ -1,0 +1,14 @@
+registry.json
+  h_af5ac1a9798224 3,10,21,32,43,54,65,76,87,98,109,120,131,142,153,164,175,186,197,208,219,241,252,263,274,285,334-377
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "89917d504db2ef4943aa3db59a2dceed6805c310",
+  "prompts": {},
+  "humans": {
+    "h_af5ac1a9798224": {
+      "author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
