@@ -1,6 +1,6 @@
 # wave-dsh-registry
 
-WAVE curated index of the dsh-plugin ecosystem. **Private — internal use only.**
+WAVE's curated index of the dsh-plugin ecosystem — the governed registry for agent-harness plugins (public, 2026-08-17).
 
 Part of the runtime-economy E6 stream. Registry-lite: curated + signed + metered index of GitHub repos tagged `topic:dsh-plugin`.
 
@@ -42,9 +42,12 @@ node bin/verify.mjs
 
 GitHub Actions runs `node bin/verify.mjs` on every push and PR to `main`.
 
-## Public flip + metered serving = ◆ Jake
+## Status: PUBLIC (2026-08-17, operator-approved)
 
-This repo stays private until Jake signs off on making the index public. When that happens, the registry becomes the public surface for the dsh-plugin ecosystem — with metered access via WAVE's x402 rail. Until then: internal only, no npm publish, no public exposure.
+The index is public. Entries carry measured stars + WAVE verdicts (HARVEST / TRACK / ABUSE /
+NOISE). Metered serving via WAVE's x402 rail and signed-verification listings are the roadmap;
+until they ship, this repo is the index of record — sweep (top-30 merge) + CI verify on every
+push.
 
 ## File structure
 
