@@ -1,8 +1,8 @@
-# wave-dsh-registry
+# WAVE Runtime Registry
 
 WAVE's curated index of the dsh-plugin ecosystem — the governed registry for agent-harness plugins (public, 2026-08-17).
 
-Part of the runtime-economy E6 stream. Registry-lite: curated + signed + metered index of GitHub repos tagged `topic:dsh-plugin`.
+The governed index of the agent-harness plugin ecosystem (repos tagged `dsh-plugin`). Every entry carries measured stars and a WAVE verdict — HARVEST, TRACK, ABUSE, or NOISE — so adopters see a curated view instead of raw topic results.
 
 ## What this is
 
