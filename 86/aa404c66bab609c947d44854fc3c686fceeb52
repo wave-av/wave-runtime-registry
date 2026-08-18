@@ -1,0 +1,39 @@
+packages/runtime-sdk/README.md
+  s_8bce822a11858c::t_135f6f7c107aca 1-35
+packages/runtime-sdk/vitest.config.ts
+  s_8bce822a11858c::t_4da25830623eaf 1-7
+packages/runtime-sdk/src/client.ts
+  s_8bce822a11858c::t_5b466af0a3b11a 1-190
+packages/runtime-sdk/package.json
+  s_8bce822a11858c::t_652dbcbb1e16a4 32,35
+  s_8bce822a11858c::t_e36ba962e932d9 1-19,22-31,33-34,36
+  s_8bce822a11858c::t_1d3d63dedf7597 20-21
+packages/runtime-sdk/tsconfig.json
+  s_8bce822a11858c::t_b25ba3520f3974 1-16
+packages/runtime-sdk/.gitignore
+  s_8bce822a11858c::t_be22024084878a 1-2
+packages/runtime-sdk/src/index.ts
+  s_8bce822a11858c::t_4c6f1a7500e286 1-9
+packages/runtime-sdk/src/client.test.ts
+  s_8bce822a11858c::t_e3eaf30ccdb4a4 1-104
+packages/runtime-sdk/package-lock.json
+  s_8bce822a11858c::t_430a13039a6387 1-1664
+packages/runtime-sdk/pnpm-lock.yaml
+  s_8bce822a11858c::t_35f9d8de0070db 1-1003
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "86aa404c66bab609c947d44854fc3c686fceeb52",
+  "prompts": {},
+  "sessions": {
+    "s_8bce822a11858c": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fe8d199b7ffeCQIM65PcUanokl",
+        "model": "mimo-v2.5"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
