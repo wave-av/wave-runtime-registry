@@ -6,7 +6,7 @@ The governed index of the agent-harness plugin ecosystem (repos tagged `dsh-plug
 
 ## What this is
 
-A curated registry of dsh-plugin ecosystem repos. Each entry carries a verdict (HARVEST / TRACK / ABUSE / NOISE) that tells WAVE's dispatch system how to route signals from that repo. This is not a package manager — it's a routing table.
+A curated registry of dsh-plugin ecosystem repos. Each entry carries a verdict (HARVEST / TRACK / ABUSE / NOISE) so adopters can route around abuse and toward value. This is not a package manager — it's an index of record. (Feeding WAVE's dispatch routing is on the roadmap, not yet wired.)
 
 ## Verdict rubric
 
