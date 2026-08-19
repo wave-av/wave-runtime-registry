@@ -1,6 +1,6 @@
 {
   "name": "@wave-av/wave-runtime-mcp",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "bin": {
     "wave-runtime-mcp": "bin/launch.js"
