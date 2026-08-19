@@ -1,0 +1,18 @@
+packages/wave-runtime-mcp/package-lock.json
+  h_af5ac1a9798224 3,9
+packages/wave-runtime-mcp/package.json
+  h_af5ac1a9798224 3,9-10
+packages/wave-runtime-mcp/src/server.ts
+  h_af5ac1a9798224 244-253
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "4114401722033db9aed71651e849e9ed642cda87",
+  "prompts": {},
+  "humans": {
+    "h_af5ac1a9798224": {
+      "author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
