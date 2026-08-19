@@ -6,13 +6,16 @@ Born 2026-08-18 (runtime-economy lane). The registry repo holds 8 agent-facing n
 
 | Package | Purpose | Status |
 |---|---|---|
-| @wave-av/dsh-plugin-wave-provider | dsh provider plugin (WAVE runtime as a provider) | built, unpublished |
-| @wave-av/dsh-plugin-wave-pay | dsh x402 pay plugin | built, unpublished |
-| @wave-av/dsh-plugin-wave-mail | dsh mail plugin (agentmail rail) | built, unpublished |
-| @wave-av/dsh-plugin-wave-memory | dsh memory plugin | built, unpublished |
-| @wave-av/dsh-plugin-wave-dispatch | dsh dispatch plugin | built, unpublished |
-| @wave-av/runtime-sdk | WAVE runtime API SDK (chat + chatStream + usage) | merged (PR #5), unpublished |
-| @wave-av/wave-runtime-mcp | MCP server: runtime_chat / runtime_models / runtime_usage | merged (PR #9), unpublished |
+| @wave-av/dsh-plugin-wave-provider | dsh provider plugin (WAVE runtime as a provider) | PUBLISHED 0.1.0 |
+| @wave-av/dsh-plugin-wave-pay | dsh x402 pay plugin | PUBLISHED 0.1.0 |
+| @wave-av/dsh-plugin-wave-mail | dsh mail plugin (agentmail rail) | PUBLISHED 0.1.0 |
+| @wave-av/dsh-plugin-wave-memory | dsh memory plugin | PUBLISHED 0.1.0 |
+| @wave-av/dsh-plugin-wave-dispatch | dsh dispatch plugin | PUBLISHED 0.1.0 |
+| @wave-av/runtime-sdk | WAVE runtime API SDK (chat + chatStream + usage) | PUBLISHED 0.1.0 |
+| @wave-av/wave-runtime-mcp | MCP server: runtime_chat / runtime_models / runtime_usage | PUBLISHED 0.1.0 |
+
+## REALITY NOTE (2026-08-18 publish round)
+The @wave-av scope in the fleet .npmrc maps to **GitHub Packages (npm.pkg.github.com)** — that scope registry OVERRIDES any --registry flag, so all 7 packages landed on GH Packages, the org's established registry (the gateway already consumes @wave-av/agent-money from there). Published: runtime-sdk, wave-runtime-mcp, and the five dsh plugins, all 0.1.0 (receipts via `npm view`). The npmjs-public path below remains the alternative if the org ever wants npmjs distribution.
 
 ## Publish law
 
