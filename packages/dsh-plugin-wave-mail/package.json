@@ -1,0 +1,22 @@
+{
+  "name": "@wave-av/dsh-plugin-wave-mail",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "description": "WAVE mail plugin for DeepSeek Harness (dsh)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wave-av/wave-runtime-registry.git"
+  }
+}
