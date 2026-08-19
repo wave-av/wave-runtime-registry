@@ -241,3 +241,13 @@ export function runServer(
 
   return { ready: done, stop };
 }
+
+// Self-start when executed as the bin (node dist/server.js): wire stdio and run until stdin closes.
+// The bin MUST self-start — an export-only module runs and exits silently (the 0.1.0 bug).
+import { realpathSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import process from 'node:process';
+// macOS /tmp is a symlink to /private/tmp — URL comparison alone never matches; compare realpaths.
+if (process.argv[1] && realpathSync(fileURLToPath(import.meta.url)) === realpathSync(process.argv[1])) {
+  runServer(process.stdin, process.stdout);
+}
