@@ -48,7 +48,7 @@ describe('wave-runtime-mcp', () => {
     expect(res.result).toMatchObject({
       protocolVersion: '2025-06-18',
       capabilities: { tools: {} },
-      serverInfo: { name: 'wave-runtime-mcp', version: '0.1.0' },
+      serverInfo: { name: 'wave-runtime-mcp', version: '0.1.2' },
     });
 
     server.stop();

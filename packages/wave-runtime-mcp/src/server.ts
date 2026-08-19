@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { WaveRuntime } from '@wave-av/runtime-sdk';
 import type { Readable, Writable } from 'node:stream';
 import { createInterface } from 'node:readline';
@@ -25,7 +26,7 @@ interface ToolDefinition {
 }
 
 const PROTOCOL_VERSION = '2025-06-18';
-const SERVER_INFO = { name: 'wave-runtime-mcp', version: '0.1.0' };
+const SERVER_INFO = { name: 'wave-runtime-mcp', version: '0.1.2' };
 
 const TOOLS: ToolDefinition[] = [
   {
