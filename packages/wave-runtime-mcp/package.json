@@ -1,13 +1,14 @@
 {
   "name": "@wave-av/wave-runtime-mcp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "bin": {
-    "wave-runtime-mcp": "dist/server.js"
+    "wave-runtime-mcp": "bin/launch.js"
   },
   "files": [
     "dist/server.js",
-    "dist/server.d.ts"
+    "dist/server.d.ts",
+    "bin/launch.js"
   ],
   "scripts": {
     "build": "tsc",
