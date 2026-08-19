@@ -1,0 +1,38 @@
+packages/wave-runtime-mcp/tsconfig.json
+  s_39aa06e8c0ee33::t_98737fa5a7607c 1-16
+packages/wave-runtime-mcp/vitest.config.ts
+  s_39aa06e8c0ee33::t_1f0b75ccea72d9 1-7
+packages/wave-runtime-mcp/src/server.test.ts
+  s_39aa06e8c0ee33::t_3bfe71d207ce67 41,54-55,61,64,76-77,83,86,104-105,111,114,127-128
+  s_39aa06e8c0ee33::t_21cff4049419a4 1-40,42-53,56-60,62-63,65-75,78-82,84-85,87-103,106-110,112-113,115-126,129-130
+packages/wave-runtime-mcp/src/server.ts
+  s_39aa06e8c0ee33::t_e94deb5fc46b9f 1-147,155-156,158,160-161,173-174,180-192,194-195,197-232,239,243
+  s_39aa06e8c0ee33::t_1c559acd54f98c 148-154,157,159,162-172,175-179,193,196,233-238,240-242
+packages/wave-runtime-mcp/README.md
+  s_39aa06e8c0ee33::t_b9dcf55471c43e 1-90
+packages/wave-runtime-mcp/.gitignore
+  s_39aa06e8c0ee33::t_1dec4891e5d1bd 1-2
+packages/wave-runtime-mcp/package.json
+  s_39aa06e8c0ee33::t_0344296b389c17 1-18,20,22-36
+  s_39aa06e8c0ee33::t_60abbf46dbf166 19,21
+packages/wave-runtime-mcp/.pr-body.md
+  s_39aa06e8c0ee33::t_ca6f091508797e 1-68
+packages/wave-runtime-mcp/package-lock.json
+  s_39aa06e8c0ee33::t_a1dd58257eee19 1-1704
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "6ed3e8378b16d93eee9b8471d63a2bf69986d2a7",
+  "prompts": {},
+  "sessions": {
+    "s_39aa06e8c0ee33": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fe8aac1ebffeu0WXClHGSNzpcW",
+        "model": "mimo-v2.5"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
