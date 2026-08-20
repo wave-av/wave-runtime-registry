@@ -1,0 +1,16 @@
+packages/wave-runtime-mcp/src/server.test.ts
+  h_af5ac1a9798224 8-16,28-44,46-55,63,67,84,87,91,107,110,122,136,139,148
+packages/wave-runtime-mcp/vitest.config.ts
+  h_af5ac1a9798224 6-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "445c2a2578e284829d0c21b9cf871a2a3aae5d0a",
+  "prompts": {},
+  "humans": {
+    "h_af5ac1a9798224": {
+      "author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
