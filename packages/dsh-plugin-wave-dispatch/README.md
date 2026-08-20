@@ -10,7 +10,7 @@ Requires the `subagents` service from the Cordis context.
 
 | Variable | Required | Default | Notes |
 |---|---|---|---|
-| `WAVE_POOL_URL` | no | `http://jakes-mac-studio.tail2cd79a.ts.net:8800` | Pool frontdoor URL |
+| `WAVE_POOL_URL` | no | `{env:WAVE_POOL_URL}` — the pool frontdoor is INTERNAL; never hardcode a tailnet URL | Pool frontdoor URL |
 | `WAVE_POOL_MODEL` | no | `deepcoder:14b` | Model identifier sent to the pool |
 
 ## Inert by design
