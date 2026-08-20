@@ -1,0 +1,16 @@
+packages/wave-runtime-mcp/bin/launch.js
+  h_af5ac1a9798224 4
+packages/wave-runtime-mcp/package.json
+  h_af5ac1a9798224 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "49f12062e5c71102248df74d6ef29ab8149805a6",
+  "prompts": {},
+  "humans": {
+    "h_af5ac1a9798224": {
+      "author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
