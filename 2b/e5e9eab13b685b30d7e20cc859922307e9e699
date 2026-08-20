@@ -1,0 +1,14 @@
+packages/wave-runtime-mcp/tsconfig.json
+  h_af5ac1a9798224 12-15,17-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "2be5e9eab13b685b30d7e20cc859922307e9e699",
+  "prompts": {},
+  "humans": {
+    "h_af5ac1a9798224": {
+      "author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
