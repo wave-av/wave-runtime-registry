@@ -1,0 +1,14 @@
+packages/dsh-plugin-wave-dispatch/README.md
+  h_af5ac1a9798224 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "b2d8f2f57027aeb5dd7d71f51170bb5e6b527ea1",
+  "prompts": {},
+  "humans": {
+    "h_af5ac1a9798224": {
+      "author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
