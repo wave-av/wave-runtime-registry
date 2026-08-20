@@ -5,13 +5,15 @@ import { PassThrough } from 'node:stream';
 // Mock the runtime-sdk module
 vi.mock('@wave-av/runtime-sdk', () => {
   return {
-    WaveRuntime: vi.fn().mockImplementation(() => ({
-      chat: vi.fn().mockResolvedValue({
-        content: 'Hello from mocked runtime!',
-        usage: { promptTokens: 10, completionTokens: 20, totalTokens: 30 },
-        raw: {},
-      }),
-    })),
+    WaveRuntime: vi.fn(function () {
+      return {
+        chat: vi.fn().mockResolvedValue({
+          content: 'Hello from mocked runtime!',
+          usage: { promptTokens: 10, completionTokens: 20, totalTokens: 30 },
+          raw: {},
+        }),
+      };
+    }),
   };
 });
 
@@ -23,15 +25,34 @@ function sendLine(input: PassThrough, obj: unknown) {
   input.write(JSON.stringify(obj) + '\n');
 }
 
-async function readLine(output: PassThrough): Promise<unknown> {
-  return new Promise((resolve, reject) => {
-    const timeout = setTimeout(() => reject(new Error('Timed out waiting for line')), 5000);
-    output.once('data', (chunk: Buffer) => {
-      clearTimeout(timeout);
-      const line = chunk.toString().trim();
-      resolve(JSON.parse(line));
-    });
+// Buffered reader: attach the data listener BEFORE the server writes (vitest 4's scheduler made the
+// race visible — a sync write can land before once('data') attaches). Also tolerate chunk splits.
+function bufferedReader(output: PassThrough): { next(): Promise<unknown>; } {
+  let buffer = '';
+  const queue: unknown[] = [];
+  const waiters: ((v: unknown) => void)[] = [];
+  output.on('data', (chunk: Buffer) => {
+    buffer += chunk.toString();
+    let idx: number;
+    while ((idx = buffer.indexOf('\n')) >= 0) {
+      const line = buffer.slice(0, idx).trim();
+      buffer = buffer.slice(idx + 1);
+      if (!line) continue;
+      const parsed = JSON.parse(line);
+      if (waiters.length > 0) waiters.shift()!(parsed);
+      else queue.push(parsed);
+    }
   });
+  return {
+    next() {
+      if (queue.length > 0) return Promise.resolve(queue.shift()!);
+      return new Promise((resolve) => waiters.push(resolve));
+    },
+  };
+}
+
+async function readLine(output: PassThrough, reader: { next(): Promise<unknown> }): Promise<unknown> {
+  return reader.next();
 }
 
 describe('wave-runtime-mcp', () => {
@@ -39,10 +60,11 @@ describe('wave-runtime-mcp', () => {
     const input = new PassThrough();
     const output = new PassThrough();
     const server = runServer(input, output);
+    const reader = bufferedReader(output);
 
     sendLine(input, { jsonrpc: '2.0', id: 1, method: 'initialize', params: {} });
 
-    const res = (await readLine(output)) as Record<string, unknown>;
+    const res = (await readLine(output, reader)) as Record<string, unknown>;
     expect(res.jsonrpc).toBe('2.0');
     expect(res.id).toBe(1);
     expect(res.result).toMatchObject({
@@ -59,13 +81,14 @@ describe('wave-runtime-mcp', () => {
     const input = new PassThrough();
     const output = new PassThrough();
     const server = runServer(input, output);
+    const reader = bufferedReader(output);
 
     sendLine(input, { jsonrpc: '2.0', id: 1, method: 'initialize', params: {} });
-    await readLine(output);
+    await readLine(output, reader);
 
     sendLine(input, { jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} });
 
-    const res = (await readLine(output)) as Record<string, unknown>;
+    const res = (await readLine(output, reader)) as Record<string, unknown>;
     expect(res.id).toBe(2);
     const tools = (res.result as { tools: unknown[] }).tools;
     expect(tools).toHaveLength(3);
@@ -81,9 +104,10 @@ describe('wave-runtime-mcp', () => {
     const input = new PassThrough();
     const output = new PassThrough();
     const server = runServer(input, output);
+    const reader = bufferedReader(output);
 
     sendLine(input, { jsonrpc: '2.0', id: 1, method: 'initialize', params: {} });
-    await readLine(output);
+    await readLine(output, reader);
 
     sendLine(input, {
       jsonrpc: '2.0',
@@ -95,7 +119,7 @@ describe('wave-runtime-mcp', () => {
       },
     });
 
-    const res = (await readLine(output)) as Record<string, unknown>;
+    const res = (await readLine(output, reader)) as Record<string, unknown>;
     expect(res.id).toBe(3);
     const result = res.result as { content: { type: string; text: string }[]; usage: unknown };
     expect(result.content[0].text).toBe('Hello from mocked runtime!');
@@ -109,9 +133,10 @@ describe('wave-runtime-mcp', () => {
     const input = new PassThrough();
     const output = new PassThrough();
     const server = runServer(input, output);
+    const reader = bufferedReader(output);
 
     sendLine(input, { jsonrpc: '2.0', id: 1, method: 'initialize', params: {} });
-    await readLine(output);
+    await readLine(output, reader);
 
     sendLine(input, { jsonrpc: '2.0', method: 'notifications/initialized' });
 
@@ -120,7 +145,7 @@ describe('wave-runtime-mcp', () => {
 
     // Now send tools/list to confirm server is still alive
     sendLine(input, { jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} });
-    const res = (await readLine(output)) as Record<string, unknown>;
+    const res = (await readLine(output, reader)) as Record<string, unknown>;
     expect(res.id).toBe(2);
     expect((res.result as { tools: unknown[] }).tools).toHaveLength(3);
 
