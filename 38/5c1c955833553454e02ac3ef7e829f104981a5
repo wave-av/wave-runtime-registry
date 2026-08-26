@@ -1,0 +1,19 @@
+packages/dsh-plugin-wave-dispatch/package.json
+  s_9e49fb2dab61f0::t_0d892fec2d2c72 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "385c1c955833553454e02ac3ef7e829f104981a5",
+  "prompts": {},
+  "sessions": {
+    "s_9e49fb2dab61f0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "981b7f1a-f483-49cf-a573-1264b8ca9553",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
