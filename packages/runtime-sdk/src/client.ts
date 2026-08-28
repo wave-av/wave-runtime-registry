@@ -71,7 +71,12 @@ export class WaveRuntime {
    * raw response body for inspection or passthrough.
    */
   async chat(params: ChatParams): Promise<ChatResult> {
-    const body = { ...params, stream: false };
+    const { maxTokens, ...rest } = params;
+    const body = {
+      ...rest,
+      ...(maxTokens !== undefined ? { max_tokens: maxTokens } : {}),
+      stream: false,
+    };
     const res = await fetch(`${this.baseUrl}/v1/chat/completions`, {
       method: 'POST',
       headers: {
@@ -115,7 +120,12 @@ export class WaveRuntime {
    * metrics when the runtime emits them on the finish chunk.
    */
   async *chatStream(params: ChatParams): AsyncGenerator<StreamChunk> {
-    const body = { ...params, stream: true };
+    const { maxTokens, ...rest } = params;
+    const body = {
+      ...rest,
+      ...(maxTokens !== undefined ? { max_tokens: maxTokens } : {}),
+      stream: true,
+    };
     const res = await fetch(`${this.baseUrl}/v1/chat/completions`, {
       method: 'POST',
       headers: {
@@ -136,6 +146,7 @@ export class WaveRuntime {
     const decoder = new TextDecoder();
     let buffer = '';
     let accumulated = '';
+            let latestUsage: Usage | undefined;
 
     try {
       while (true) {
@@ -152,7 +163,7 @@ export class WaveRuntime {
 
           const data = trimmed.slice(5).trim();
           if (data === '[DONE]') {
-            yield { content: accumulated, done: true };
+            yield { content: accumulated, done: true, usage: latestUsage };
             return;
           }
 
@@ -164,27 +175,36 @@ export class WaveRuntime {
                 completion_tokens?: number;
                 total_tokens?: number;
               };
+              'x-wave-usage'?: {
+                prompt_tokens?: number;
+                completion_tokens?: number;
+                total_tokens?: number;
+              };
             };
 
             const delta = event.choices?.[0]?.delta?.content ?? '';
             accumulated += delta;
 
-            const usage = event.usage
+            const usageSource = event.usage ?? event['x-wave-usage'];
+              const usage = usageSource
               ? {
-                  promptTokens: event.usage.prompt_tokens,
-                  completionTokens: event.usage.completion_tokens,
-                  totalTokens: event.usage.total_tokens,
+                  promptTokens: usageSource.prompt_tokens,
+                  completionTokens: usageSource.completion_tokens,
+                  totalTokens: usageSource.total_tokens,
                 }
               : undefined;
 
-            yield { content: accumulated, done: false, usage };
+            if (usage) latestUsage = usage;
+
+              yield { content: accumulated, done: false, usage };
           } catch {
             // Skip malformed SSE lines
           }
         }
       }
     } finally {
-      reader.releaseLock();
+      await reader.cancel().catch(() => {});
+        reader.releaseLock();
     }
   }
 }
