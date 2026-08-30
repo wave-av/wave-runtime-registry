@@ -1,0 +1,21 @@
+PERMISSIONS.md
+  s_763704559b8a10::t_9127e79bb4684f 1-55
+TESTING.md
+  s_763704559b8a10::t_19b425a8c2f814 1-43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "fc3df6b154972b01023bb9038b4fbee7a979bc32",
+  "prompts": {},
+  "sessions": {
+    "s_763704559b8a10": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e77ba90b-211c-4f34-9fdd-ec883ec30c42",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
