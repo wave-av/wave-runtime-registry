@@ -1,0 +1,19 @@
+PUBLISH-RUNBOOK.md
+  s_727a7865b9cf0a::t_9c9c14d47bdff2 18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "e99e1bfb54c45ec7acb856a4fb8f51c648ece81f",
+  "prompts": {},
+  "sessions": {
+    "s_727a7865b9cf0a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9c4cb020-d377-430e-9356-a2a574828c3f",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
