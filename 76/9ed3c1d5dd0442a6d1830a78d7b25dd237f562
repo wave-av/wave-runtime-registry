@@ -1,0 +1,23 @@
+.foundation-version
+  s_727a7865b9cf0a::t_b2864a808f679e 1
+.github/workflows/_checks.yml
+  s_727a7865b9cf0a::t_ac6aa1b92a4f8a 1-156
+.github/workflows/foundation-gate.yml
+  s_727a7865b9cf0a::t_e4b5dceb24b90a 1-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "769ed3c1d5dd0442a6d1830a78d7b25dd237f562",
+  "prompts": {},
+  "sessions": {
+    "s_727a7865b9cf0a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9c4cb020-d377-430e-9356-a2a574828c3f",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
