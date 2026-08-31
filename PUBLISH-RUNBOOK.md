@@ -15,7 +15,7 @@ Born 2026-08-18 (runtime-economy lane). The registry repo holds 8 agent-facing n
 | @wave-av/wave-runtime-mcp | MCP server: runtime_chat / runtime_models / runtime_usage | PUBLISHED 0.1.0 |
 
 ## REALITY NOTE (2026-08-18 publish round)
-The @wave-av scope in the fleet .npmrc maps to **GitHub Packages (npm.pkg.github.com)** — that scope registry OVERRIDES any --registry flag, so all 7 packages landed on GH Packages, the org's established registry (the gateway already consumes @wave-av/agent-money from there). Published: runtime-sdk, wave-runtime-mcp, and the five dsh plugins, all 0.1.0 (receipts via `npm view`). The npmjs-public path below remains the alternative if the org ever wants npmjs distribution.
+The @wave-av scope in the fleet .npmrc maps to **GitHub Packages (npm.pkg.github.com)** — that scope registry OVERRIDES any --registry flag, so all 7 packages landed on GH Packages, the org's established registry (the gateway already consumes @wave-av/agent-money from there). Published: runtime-sdk, wave-runtime-mcp, and the five dsh plugins, all 0.1.0 (receipts via `npm view`). The npmjs-public path below remains the alternative if the org ever wants npmjs distribution. <!-- # guard:allow published-package-name-@wave-av/agent-money-cited-as-consumer-example,-not-a-private-repo-reference -->
 
 ## Publish law
 
