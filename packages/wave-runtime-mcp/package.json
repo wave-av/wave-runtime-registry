@@ -8,7 +8,8 @@
   "files": [
     "dist/server.js",
     "dist/server.d.ts",
-    "bin/launch.js"
+    "bin/launch.js",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc",
