@@ -1,0 +1,57 @@
+.github/workflows/license-truth.yml
+  s_418f585ff58cb5::t_408a941edb3718 1-39
+packages/runtime-sdk/package.json
+  s_418f585ff58cb5::t_c6c41328f46161 13-14
+bin/license-truth.mjs
+  s_418f585ff58cb5::t_fcb039134a2009 1-173
+packages/wave-runtime-mcp/package.json
+  s_418f585ff58cb5::t_3e53cfda44b0f4 11-12
+packages/dsh-plugin-wave-dispatch/package.json
+  s_11a6ac284edbf8::t_95bfc1fe5b8189 7-8
+packages/dsh-plugin-wave-mail/package.json
+  s_11a6ac284edbf8::t_77600b09ee7198 7-8
+packages/dsh-plugin-wave-memory/package.json
+  s_11a6ac284edbf8::t_8768d62ae3c778 7-8
+packages/dsh-plugin-wave-pay/package.json
+  s_11a6ac284edbf8::t_b98f3974888adb 7-8
+packages/dsh-plugin-wave-provider/package.json
+  s_11a6ac284edbf8::t_783864fa6d555b 7-8
+packages/dsh-plugin-wave-dispatch/LICENSE
+  s_418f585ff58cb5::t_5840076f17971f 1-21
+packages/dsh-plugin-wave-mail/LICENSE
+  s_418f585ff58cb5::t_cbc1e5bd192033 1-21
+packages/dsh-plugin-wave-memory/LICENSE
+  s_418f585ff58cb5::t_576dbc17f8c190 1-21
+packages/dsh-plugin-wave-pay/LICENSE
+  s_418f585ff58cb5::t_7d31681ef54f57 1-21
+packages/dsh-plugin-wave-provider/LICENSE
+  s_418f585ff58cb5::t_3b390f994ffcdf 1-21
+packages/runtime-sdk/LICENSE
+  s_418f585ff58cb5::t_24b16bc9ae1e64 1-202
+packages/wave-runtime-mcp/LICENSE
+  s_418f585ff58cb5::t_7c2873dd1686a0 1-202
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "1adccd29a2b372e19f333218527e899a8da2c2cd",
+  "prompts": {},
+  "sessions": {
+    "s_11a6ac284edbf8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-ad66764c3d3794679",
+        "model": "unknown"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    },
+    "s_418f585ff58cb5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e5b410ce-aa9a-48d6-be5d-09400395b1b6",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
