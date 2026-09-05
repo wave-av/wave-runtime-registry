@@ -1,0 +1,37 @@
+packages/dsh-plugin-wave-dispatch/LICENSE
+  s_5a61d1043d4385::t_18a54896c6afbc 1-202
+packages/dsh-plugin-wave-dispatch/package.json
+  s_5a61d1043d4385::t_fedbf6facd9674 7-8,13
+packages/dsh-plugin-wave-mail/LICENSE
+  s_5a61d1043d4385::t_73d4da4d0fdd2d 1-202
+packages/dsh-plugin-wave-mail/package.json
+  s_5a61d1043d4385::t_d9900277769fae 7-8,13
+packages/dsh-plugin-wave-memory/LICENSE
+  s_5a61d1043d4385::t_aa8957fc256ce9 1-202
+packages/dsh-plugin-wave-memory/package.json
+  s_5a61d1043d4385::t_d9a0e74852c6d1 7-8,13
+packages/dsh-plugin-wave-pay/LICENSE
+  s_5a61d1043d4385::t_c956374688fdd8 1-202
+packages/dsh-plugin-wave-pay/package.json
+  s_5a61d1043d4385::t_716a61e2a2abc2 7-8,13
+packages/dsh-plugin-wave-provider/LICENSE
+  s_5a61d1043d4385::t_afd4bb3941154f 1-202
+packages/dsh-plugin-wave-provider/package.json
+  s_5a61d1043d4385::t_04aa12cc4e92b0 7-8,13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "be2e56cfde4ae34e9ec9ab938e87d989b5d0c246",
+  "prompts": {},
+  "sessions": {
+    "s_5a61d1043d4385": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a8f294ac7f35f238a",
+        "model": "unknown"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
