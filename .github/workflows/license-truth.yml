@@ -1,0 +1,39 @@
+name: license-truth
+
+# Required-shaped gate: every package that DECLARES a license in package.json must SHIP the
+# matching LICENSE text in its published tarball (see bin/license-truth.mjs for the full
+# rationale). Wired as its own workflow — not a step buried in an unrelated job — so it shows
+# up as its own named required check and cannot be silently skipped by a change elsewhere in
+# the pipeline.
+#
+# Third state: the script itself exits non-zero if it cannot enumerate packages or finds zero
+# license-declaring manifests — "could not measure" maps to FAILURE here, never to a `skipped`
+# conclusion. A `skipped` conclusion still satisfies a required check, which is the exact defect
+# this gate exists to close, so this job must always actually run and always actually measure.
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: license-truth-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  license-truth:
+    name: License text matches declaration
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        with:
+          node-version: "24"
+      - name: Verify every declared license ships matching text
+        run: node bin/license-truth.mjs
