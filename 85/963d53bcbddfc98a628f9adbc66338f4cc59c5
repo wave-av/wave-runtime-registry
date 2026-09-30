@@ -1,0 +1,23 @@
+LICENSE
+  s_5d00c0a6a15ae3::t_917972aa1ac161 189
+packages/runtime-sdk/LICENSE
+  s_5d00c0a6a15ae3::t_cd65a09901fab1 189
+packages/wave-runtime-mcp/LICENSE
+  s_5d00c0a6a15ae3::t_20412ffd8c16e5 189
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "85963d53bcbddfc98a628f9adbc66338f4cc59c5",
+  "prompts": {},
+  "sessions": {
+    "s_5d00c0a6a15ae3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-ac4fd7536de20a331",
+        "model": "unknown"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
