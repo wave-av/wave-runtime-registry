@@ -1,0 +1,27 @@
+packages/dsh-plugin-wave-dispatch/LICENSE
+  s_0db4312b34764b::t_f535aa6ef9d0a0 3
+packages/dsh-plugin-wave-mail/LICENSE
+  s_0db4312b34764b::t_3b9653855455d6 3
+packages/dsh-plugin-wave-memory/LICENSE
+  s_0db4312b34764b::t_614d74457fceb5 3
+packages/dsh-plugin-wave-pay/LICENSE
+  s_0db4312b34764b::t_15ae65b2b3af05 3
+packages/dsh-plugin-wave-provider/LICENSE
+  s_0db4312b34764b::t_905b95810de8f1 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "a37e50fc1a0ec75f3a9bd31e47dec7f2e1d05c63",
+  "prompts": {},
+  "sessions": {
+    "s_0db4312b34764b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-af03e79a3e43b12eb",
+        "model": "unknown"
+      },
+      "human_author": "Jake Fineman <jakefineman@gmail.com>"
+    }
+  }
+}
